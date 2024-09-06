@@ -1,0 +1,109 @@
+/* Seletores e especificidade */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Cor hexadecimal */
+    margin: 0;
+    padding: 0;
+}
+
+/* ID tem maior especificidade */
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Medida em px */
+    background-color: white;
+    text-align: center;
+}
+
+/* Classe */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: hsl(210, 50%, 50%); /* HSL */
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.9); /* RGBA */
+    font-size: 2.5rem; /*  rem */
+    margin: 0;
+}
+
+p {
+    color: #333; /*  hexadecimal */
+    line-height: 1.6;
+    margin-bottom: 1rem; 
+}
+
+.box {
+    border: 1px solid #ccc; /*border */
+    padding: 20px; /*padding */
+    margin: 10px 0; /* margin */
+    background-color: #fafafa;
+    transition: transform 0.3s ease; /* Transição */
+}
+
+.box:hover {
+    transform: scale(1.05); /* Transformação */
+}
+
+/* Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.flex-item {
+    flex: 1;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #ddd;
+}
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #b0e0e6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries e Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+/* Animação */
+.animate {
+    width: 100px;
+    height: 100px;
+    background-color: #4caf50;
+    margin: 50px auto;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
